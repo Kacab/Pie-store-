@@ -1,0 +1,332 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    /* justify-content: center;
+    align-items: center;
+    height: 100vh; */
+}
+
+ .board{
+     width: 1100px; 
+     background-color:   hsl(13, 31%, 94%);
+     height: 860px; 
+    display: flex;
+      flex-wrap: wrap;  
+      
+     position: relative;
+     box-shadow:  0 5px 10px rgba(0, 0, 0, 0.1), 
+     0 5px 5px rgba(0, 0, 0, 0.4);
+
+} 
+.deserts{
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    justify-content: space-evenly;
+
+}
+
+.dish-box{
+    width: 230px;
+     height: 190px; 
+    /* background-color: red; */
+    margin: 10px;
+   border-radius: 10px;
+ 
+}
+
+ .dish-box:nth-of-type(3){
+    /* display: flex;
+   justify-content: flex-end;  */
+   position: absolute;
+   width: 300px;
+   right: 0;
+   bottom: 10;
+   border: 2px solid rgb(179, 155, 155);
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+   height: 490px;
+   /* height: 550px; */
+  /* background-color: aqua; */
+}
+
+.dish-box:nth-of-type(1){
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+    background-image: url(./assets/images/image-waffle-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* position: absolute; */
+    
+}
+ #but1{
+    border-radius: 50px;
+    padding: 10px;
+     position: absolute;
+    bottom: -10%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 150px;   
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+
+ }
+ 
+ #but1:hover{
+    background-color: orange;
+ }
+ .dish-box:nth-of-type(2){
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+    background-image: url(./assets/images/image-creme-brulee-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#but2{
+    border-radius: 50px;
+    padding: 10px;
+    position: absolute;
+    bottom: -10%; /* Move it 50% below the bottom edge of the parent */
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%);
+    width: 150px;
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dish-box:nth-of-type(4){
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+    background-image: url(./assets/./images/image-macaron-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#but4{
+    border-radius: 50px;
+    padding: 10px;
+     position: absolute;
+    bottom: -10%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 150px;   
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.dish-box:nth-of-type(5){
+    /* display: flex;
+    justify-content: flex-end;
+    flex-direction: column; */
+    position: relative;
+    background-image: url(./assets/./images/image-tiramisu-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#but5{
+    border-radius: 50px;
+    padding: 10px;
+     position: absolute;
+    bottom: -10%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 150px;   
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dish-box:nth-of-type(6){
+    /* display: flex;
+    justify-content: flex-end;
+    flex-direction: column; */
+    position: relative;
+    background-image: url(./assets/./images/image-baklava-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#but6{
+    border-radius: 50px;
+    padding: 10px;
+     position: absolute;
+    bottom: -10%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 150px;   
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dish-box:nth-of-type(7){
+    /* display: flex;
+    justify-content: flex-end;
+    flex-direction: column; */
+    position: relative;
+    background-image: url(./assets/./images/image-meringue-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#but7{
+    border-radius: 50px;
+    padding: 10px;
+    position: absolute;
+    bottom: -10%; /* Move it 50% below the bottom edge of the parent */
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%);
+    width: 150px;
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dish-box:nth-of-type(8){
+    /* display: flex;
+    justify-content: flex-end;
+    flex-direction: column; */
+    position: relative;
+    background-image: url(./assets/./images/image-cake-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#but8{
+    border-radius: 50px;
+    padding: 10px;
+    position: absolute;
+    bottom: -10%; /* Move it 50% below the bottom edge of the parent */
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%);
+    width: 150px;
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.dish-box:nth-of-type(9){
+    /* display: flex;
+    justify-content: flex-end;
+    flex-direction: column; */
+    position: relative;
+    background-image: url(./assets/./images/image-brownie-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#but9{
+    border-radius: 50px;
+    padding: 10px;
+    position: absolute;
+    bottom: -10%; /* Move it 50% below the bottom edge of the parent */
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%);
+    width: 150px;
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dish-box:nth-of-type(10){
+    /* display: flex;
+    justify-content: flex-end;
+    flex-direction: column; */
+    position: relative;
+    background-image: url(./assets/./images/image-panna-cotta-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#but10{
+    border-radius: 50px;
+    padding: 10px;
+    position: absolute;
+    bottom: -10%; /* Move it 50% below the bottom edge of the parent */
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%);
+    width: 150px;
+    display:  flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* .deserts h4{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+} */
+
+
+.mini{
+   width: 220px; 
+   /* background-color: red;  */
+  position: absolute;
+    bottom: -40%; /* Move it 50% below the bottom edge of the parent */
+   
+   
+}
+.mini .m1:nth-of-type(3) {
+    color: orange;
+}
+
+.mini .m1:nth-of-type(1) {
+   font-weight: lighter;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    
+}
+
+.mini .m1:nth-of-type(2) {
+    font-weight: lighter;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+     
+ }
+ 
+ .mini2{
+    width: 220px;
+    position: absolute;
+    bottom: -40%;
+ }
+
+ .mini2 .m1:nth-of-type(3) {
+    color: orange;
+}
+
+/* #but1 #svg1:nth-of-type(1){
+    display: flex;
+    justify-content: flex-end;
+} */
+/* #but1:nth-of-type(1){
+    display: flex;
+    justify-content: flex-end;
+} */
+/* .dish-box {
+    display: flex;
+    justify-content: space-between;
+    
+} 
+
+
+    */
+
+ 
+ #svg2{
+    display: none;
+ }
+
+ #svg1{
+    display: none;
+ }
+
+
+ 
