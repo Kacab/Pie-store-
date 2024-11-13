@@ -5,21 +5,30 @@ const svg3 = document.querySelector('#svg3');
 const add = document.querySelector('#add');
 
 const but1 = document.querySelector('#but1');
+const but2  = document.querySelector('#but2')
 const svg1 = document.querySelector('#svg1');
 const svg2 = document.querySelector('#svg2');
 let foundItem;
 let foundItem2;
 let total = 0;
-const priceElement = document.createElement('p');
+const productDiv2 = document.createElement('div');
+const priceElement2 = document.createElement('p');
+const nameElement2 = document.createElement('p');
 
 let isProductAdded = false;
  const priceTotal = document.createElement('p');
 let a;
+let b;
 
 
 function sum(num1){
  total = total+num1
  return  total;
+}
+
+function sub(num2){
+  total= total-num2
+   return total ;
 }
 
 
@@ -59,7 +68,7 @@ but1.addEventListener('click', function () {
     fetch("./data.json")
         .then((response) => response.json())
         .then((data) => {
-            data.some((product) => {
+            data.forEach((product) => {
                 
                 if (product.name === 'Waffle with Berries' && product.price ===6.50) {
                     const productDiv = document.createElement('div');
@@ -69,17 +78,17 @@ but1.addEventListener('click', function () {
                     const nameElement = document.createElement('p');
                     nameElement.textContent = `${value} ${product.name}`;
 
-                    // const priceElement = document.createElement('p');
+                    const priceElement = document.createElement('p');
                   priceElement.textContent = `price @ ${foundItem2}  $  `
                     productDiv.appendChild(nameElement);
                     productDiv.appendChild(priceElement);
 
                     addPrices().then((pricess) => {
-                        pricess.forEach((item) => {
+                        pricess.some((item) => {
                             priceElement.textContent += `  ${item.textContent}`;
                         });
                     });
-                  a = sum(foundItem2)
+                   a = sum(foundItem2)
                     cart.appendChild(productDiv);
                     isProductAdded = true;
                     cartCount++;
@@ -99,11 +108,15 @@ but1.addEventListener('click', function () {
                    
                     add.style.display = 'none';
                     svg3.style.display = 'none';
+
+
                     svg2.addEventListener('click', function () {
                         console.log('clicked')
                      a = sum(foundItem2)
+
                       priceElement.textContent = `price: @  ${foundItem2} AT $ ${a}USD `
                       console.log(a)
+                      console.log('total is ' ,total)
 
                 
 
@@ -134,6 +147,10 @@ but1.addEventListener('click', function () {
 
                     svg1.addEventListener('click', function () {
                         console.log('clickerd 22')
+
+                      b = sub(foundItem2)
+                       priceElement.textContent = `price: @  ${foundItem2} AT $ ${b}USD `
+                      console.log(b)
                     
                         // svg1.style.display = 'none';
                         if (value > 1) {
@@ -157,4 +174,37 @@ but1.addEventListener('click', function () {
             });
         })
         .catch(error => console.error('Error fetching the JSON file:', error));
+        
 });
+
+but2.addEventListener('click',function(){
+    fetch('./data.json')
+    .then((response)=>{
+    return response.json()
+   
+    })
+    .then((data)=>{
+      data.some((shay)=>{
+        if(shay.name ==="Vanilla Bean Crème Brûlée" && shay.price ===7.00){
+            let value2 = 1
+            console.log(shay.name)
+            console.log(shay.price)
+            priceElement2.textContent = shay.price;
+           nameElement2.textContent = shay.name;
+           
+
+           
+           productDiv2.appendChild(nameElement2)
+           console.log(productDiv2)
+           cart.appendChild(productDiv2)
+        }
+      })
+    })
+})
+
+
+
+
+
+
+
