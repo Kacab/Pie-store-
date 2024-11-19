@@ -3,11 +3,15 @@ const cartCountElement = document.querySelector('#cart-count');
 let cartCount = 0;
 const svg3 = document.querySelector('#svg3');
 const add = document.querySelector('#add');
+const dvg = document.querySelector('#dvg')
 
 const but1 = document.querySelector('#but1');
 const but2  = document.querySelector('#but2')
 const svg1 = document.querySelector('#svg1');
 const svg2 = document.querySelector('#svg2');
+const add2  = document.querySelector('#add2')
+const i1  = document.querySelector("#i1")
+const d1= document.querySelector('#d1')
 let foundItem;
 let foundItem2;
 let total = 0;
@@ -128,17 +132,17 @@ but1.addEventListener('click', function () {
                     });
 
 
-                    function resetCartState() {
-                        isProductAdded = false;  // Allow adding items again
-                        cartCount = 0;           // Reset cart count
-                        cartCountElement.textContent = `Your cart (${cartCount})`; // Update cart count display
+                    // function resetCartState() {
+                    //     isProductAdded = false;  // Allow adding items again
+                    //     cartCount = 0;           // Reset cart count
+                    //     cartCountElement.textContent = `Your cart (${cartCount})`; // Update cart count display
                         
-                        // Reset visibility of add button and icons
-                        svg3.style.display = 'block';
-                        add.style.display = 'block';
-                        svg1.style.display = 'none';
-                        svg2.style.display = 'none';
-                    }
+                    //     // Reset visibility of add button and icons
+                    //     svg3.style.display = 'block';
+                    //     add.style.display = 'block';
+                    //     svg1.style.display = 'none';
+                    //     svg2.style.display = 'none';
+                    // }
 
 
 
@@ -190,13 +194,20 @@ but2.addEventListener('click',function(){
             console.log(shay.name)
             console.log(shay.price)
             priceElement2.textContent = shay.price;
-           nameElement2.textContent = shay.name;
+           nameElement2.textContent = `${value2} ${shay.name}`;
            
 
            
            productDiv2.appendChild(nameElement2)
            console.log(productDiv2)
            cart.appendChild(productDiv2)
+          
+          dvg.style.display = 'none'
+          add2 .style.display = 'none'
+          d1.style.display = 'block'
+           i1 .style.display = 'block'
+
+           
         }
       })
     })

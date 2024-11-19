@@ -330,5 +330,16 @@ body{
     display: none;
  }
 
+ #but2:hover{
+    background-color: orange;
+ }
+
+ #d1{
+    display: none;
+ }
+
+ #i1{
+    display: none;
+ }
 
  
