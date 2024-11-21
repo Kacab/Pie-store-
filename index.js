@@ -25,6 +25,9 @@ let a;
 let b;
 
 
+
+
+
 function sum(num1){
  total = total+num1
  return  total;
@@ -76,7 +79,7 @@ but1.addEventListener('click', function () {
                 
                 if (product.name === 'Waffle with Berries' && product.price ===6.50) {
                     const productDiv = document.createElement('div');
-                    let value = 1;
+                 let value = 1;
                     foundItem2 = parseFloat(product.price.toFixed(2));
 
                     const nameElement = document.createElement('p');
@@ -181,7 +184,9 @@ but1.addEventListener('click', function () {
         
 });
 
+let value2 = 1;
 but2.addEventListener('click',function(){
+    
     fetch('./data.json')
     .then((response)=>{
     return response.json()
@@ -190,15 +195,16 @@ but2.addEventListener('click',function(){
     .then((data)=>{
       data.some((shay)=>{
         if(shay.name ==="Vanilla Bean Crème Brûlée" && shay.price ===7.00){
-            let value2 = 1
-            console.log(shay.name)
-            console.log(shay.price)
-            priceElement2.textContent = shay.price;
+        
+            // console.log(shay.name)
+            // console.log(shay.price)
+            priceElement2.textContent =  `price @ ${shay.price} USD`
            nameElement2.textContent = `${value2} ${shay.name}`;
            
-
+        
            
            productDiv2.appendChild(nameElement2)
+           productDiv2.appendChild(priceElement2)
            console.log(productDiv2)
            cart.appendChild(productDiv2)
           
@@ -207,10 +213,21 @@ but2.addEventListener('click',function(){
           d1.style.display = 'block'
            i1 .style.display = 'block'
 
+          
+           i1.addEventListener('click',function(){
+ 
+            value2++
+            nameElement2.textContent = `${value2} ${shay.name}`
+             
+              console.log(value2)
+              
+            })
            
         }
       })
     })
+ 
+
 })
 
 
