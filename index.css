@@ -344,10 +344,14 @@ body{
 
  
 @media(max-width:500px){
+    body{
+    width: 100%;
+    }
   
    .board{
-    height: 75%;
-    width: 75%;
+     height: 100%; 
+    width: 100%;
+ 
    
    }
    .deserts{
@@ -356,6 +360,10 @@ body{
     justify-content: center; 
     align-items: center;
   
+
+  
   
    }
+   
+ 
 }
