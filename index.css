@@ -12,7 +12,7 @@ body{
  .board{
      width: 1100px; 
      background-color:   hsl(13, 31%, 94%);
-     height: 860px; 
+      height: 860px;  
     display: flex;
       flex-wrap: wrap;  
       
@@ -343,3 +343,19 @@ body{
  }
 
  
+@media(max-width:500px){
+  
+   .board{
+    height: 75%;
+    width: 75%;
+   
+   }
+   .deserts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+  
+  
+   }
+}
