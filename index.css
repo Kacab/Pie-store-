@@ -365,5 +365,27 @@ body{
   
    }
    
+   .mini{
+    
+    width: 220px; 
+    height: 100px;
+       /* background-color: red;     */
+   position: absolute;
+     bottom: -60%; /* Move it 50% below the bottom edge of the parent */
+    
+    display: flex;
+    flex-direction: column;
+   
+   justify-content: flex-start;
+
+ }
+
+  .dish-box:nth-of-type(2){
+    position: relative;
+    top: 90px; 
+ } 
+ 
  
 }
+
+ 
