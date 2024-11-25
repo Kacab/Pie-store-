@@ -12,7 +12,7 @@ body{
  .board{
      width: 1100px; 
      /* background-color:   hsl(13, 31%, 94%); */
-      height: 860px;  
+       height: 860px;  
     display: flex;
       flex-wrap: wrap;  
       
@@ -352,17 +352,22 @@ body{
  
     width: 100%;
    box-shadow: none;
+   display: flex;
   
    }
    .deserts{
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    align-items: center;
+     align-items: center; 
   
 
   
   
+   } 
+   .dish-box{
+    display: flex;
+    justify-items: flex-start;
    }
    
    .mini{
@@ -430,7 +435,17 @@ body{
   top: 760px; 
  }
  
- 
+ .dish-box:nth-of-type(3){
+   
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 2700px;
+
+
+    
+ }
+
  
  
  
