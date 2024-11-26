@@ -233,6 +233,23 @@ body{
    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
+#sub1{
+    width: 150px;
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 20px;
+}
+.submit{
+    position: absolute;
+    top: 430px;
+   
+    
+    
+}
+.dum1{
+    display: flex;
+    justify-content: space-around;
+}
 
 #but9{
     border-radius: 50px;
