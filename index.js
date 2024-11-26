@@ -4,6 +4,8 @@ let cartCount = 0;
 const svg3 = document.querySelector('#svg3');
 const add = document.querySelector('#add');
 const dvg = document.querySelector('#dvg')
+const allTotal = document.querySelector('.num')
+const itemTotal = document.createElement('p')
 
 const but1 = document.querySelector('#but1');
 const but2  = document.querySelector('#but2')
@@ -13,8 +15,9 @@ const add2  = document.querySelector('#add2')
 const i1  = document.querySelector("#i1")
 const d1= document.querySelector('#d1')
 let foundItem;
+const productDiv = document.createElement('div');
 let foundItem2;
-let total = 0;
+let total = 6.50;
 const productDiv2 = document.createElement('div');
 const priceElement2 = document.createElement('p');
 const nameElement2 = document.createElement('p');
@@ -37,6 +40,7 @@ function sub(num2){
   total= total-num2
    return total ;
 }
+
 
 
 function addPrices() {
@@ -68,6 +72,16 @@ function addPrices() {
             });
     });
 }
+function tot(){
+   itemTotal.textContent =`Total: ${total.toFixed(2)}`
+   allTotal.innerHTML = "";
+ 
+   allTotal.appendChild(itemTotal)
+   allTotal.style.color = 'red'
+ 
+
+}
+
 
 but1.addEventListener('click', function () {
     if (isProductAdded) return; // Exit early if product is already added
@@ -78,9 +92,10 @@ but1.addEventListener('click', function () {
             data.forEach((product) => {
                 
                 if (product.name === 'Waffle with Berries' && product.price ===6.50) {
-                    const productDiv = document.createElement('div');
+                    // const productDiv = document.createElement('div');
                  let value = 1;
                     foundItem2 = parseFloat(product.price.toFixed(2));
+                  tot()
 
                     const nameElement = document.createElement('p');
                     nameElement.textContent = `${value} ${product.name}`;
@@ -115,10 +130,12 @@ but1.addEventListener('click', function () {
                    
                     add.style.display = 'none';
                     svg3.style.display = 'none';
-
+                
+                    
 
                     svg2.addEventListener('click', function () {
                         console.log('clicked')
+                        tot()
                      a = sum(foundItem2)
 
                       priceElement.textContent = `price: @  ${foundItem2} AT $ ${a}USD `
@@ -179,6 +196,7 @@ but1.addEventListener('click', function () {
                     });
                 }
             });
+            
         })
         .catch(error => console.error('Error fetching the JSON file:', error));
         

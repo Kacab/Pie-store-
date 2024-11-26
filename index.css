@@ -226,6 +226,13 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.num{
+    position: absolute;
+    top: 380px;
+   
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
 
 #but9{
     border-radius: 50px;
