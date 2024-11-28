@@ -234,10 +234,14 @@ body{
 
 }
 #sub1{
-    width: 150px;
+    width: 250px;
     padding: 10px;
     border: 2px solid;
     border-radius: 20px;
+    cursor: pointer;
+}
+#sub1:hover{
+    background-color: orange;
 }
 .submit{
     position: absolute;
@@ -293,6 +297,36 @@ body{
     justify-content: flex-end;
 } */
 
+#start{
+   
+  width: 300px;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 8px;
+}
+.con1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+   /* Ensure the container has a height */
+   
+    /* Optional for debugging */
+}
+
+.confirm{
+   
+    width: 400px;
+    /* height: 210px; */
+    display: none;
+     
+    position: absolute;
+    bottom: 500px;
+    left: 200px;
+    z-index: 999;
+     background-color:   hsl(13, 31%, 94%); 
+}
 
 .mini{
    width: 220px; 

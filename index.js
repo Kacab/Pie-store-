@@ -1,15 +1,18 @@
 const cart = document.querySelector('#dish');
 const cartCountElement = document.querySelector('#cart-count');
 let cartCount = 0;
+
 const svg3 = document.querySelector('#svg3');
 const add = document.querySelector('#add');
 const dvg = document.querySelector('#dvg')
 const allTotal = document.querySelector('.num')
 const itemTotal = document.createElement('p')
+const showItems = document.querySelector('.confirm')
 
 const but1 = document.querySelector('#but1');
 const but2  = document.querySelector('#but2')
 const svg1 = document.querySelector('#svg1');
+const confirmation = document.querySelector('#sub1')
 const svg2 = document.querySelector('#svg2');
 const add2  = document.querySelector('#add2')
 const i1  = document.querySelector("#i1")
@@ -81,7 +84,10 @@ function tot(){
  
 
 }
-
+confirmation.addEventListener('click',function(){
+    console.log('hi')
+   showItems.style.display = 'block'
+})
 
 but1.addEventListener('click', function () {
     if (isProductAdded) return; // Exit early if product is already added
