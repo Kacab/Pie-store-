@@ -1,6 +1,9 @@
 const cart = document.querySelector('#dish');
 const cartCountElement = document.querySelector('#cart-count');
 let cartCount = 0;
+const clear = document.querySelector('#start')
+const con1 = document.querySelector('.con1')
+const isClicable = false;
 
 const svg3 = document.querySelector('#svg3');
 const add = document.querySelector('#add');
@@ -21,6 +24,7 @@ let foundItem;
 const productDiv = document.createElement('div');
 let foundItem2;
 let total = 6.50;
+const nameElement = document.createElement('p');
 const productDiv2 = document.createElement('div');
 const priceElement2 = document.createElement('p');
 const nameElement2 = document.createElement('p');
@@ -84,14 +88,49 @@ function tot(){
  
 
 }
-confirmation.addEventListener('click',function(){
-    console.log('hi')
-   showItems.style.display = 'block'
+clear.addEventListener('click',function(){
+    con1.innerHTML = ''
+    updateButton()
 })
+// if(isProductAdded){
+//     confirmation.disabled = true;
+  
+// }else{
+//     confirmation.disabled = false;
+// }
+
+function updateButton(){
+    if(!isProductAdded){
+        confirmation.disabled = true
+    }else{
+        confirmation.disabled = false
+    }
+}
+    confirmation.addEventListener('click',function(){
+         if (!isProductAdded) return;
+        console.log('hi')
+       showItems.style.display = 'block'
+       
+    //    while (cart.firstChild) {
+    //     con1.appendChild(cart.firstChild);
+    //   }
+       con1.appendChild(nameElement2)
+       con1.appendChild(nameElement)
+      con1.appendChild(itemTotal)
+        //  updateButton()
+    })
+  
+
 
 but1.addEventListener('click', function () {
     if (isProductAdded) return; // Exit early if product is already added
     
+ 
+
+
+
+
+
     fetch("./data.json")
         .then((response) => response.json())
         .then((data) => {
@@ -102,8 +141,8 @@ but1.addEventListener('click', function () {
                  let value = 1;
                     foundItem2 = parseFloat(product.price.toFixed(2));
                   tot()
-
-                    const nameElement = document.createElement('p');
+                    
+                    // const nameElement = document.createElement('p');
                     nameElement.textContent = `${value} ${product.name}`;
 
                     const priceElement = document.createElement('p');
@@ -138,7 +177,7 @@ but1.addEventListener('click', function () {
                     svg3.style.display = 'none';
                 
                     
-
+                      console.log(cart)
                     svg2.addEventListener('click', function () {
                         console.log('clicked')
                         tot()
